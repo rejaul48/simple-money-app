@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUi and tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hide the up and down arrows for number input */
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type='number'] {
+            -moz-appearance: textfield;
+            /* For Firefox */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex justify-center items-center h-[100vh]">
+        <div class="mockup-phone border-primary">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-1">
+
+                    <!-- current ballance container start -->
+
+                    <div class="stats bg-primary w-full text-white bg-transparent">
+                        <div class="stat text-center">
+                            <div class="stat-title">Current balance</div>
+                            <div id="balance" class="stat-value">5500</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- current ballance container end -->
+
+
+                    <!-- Deposit and Withdraw section start -->
+                    <div>
+
+                        <button id="addMoneyBtn" class="btn btn-success text-gray-200">Add Money</button>
+                        <button id="withdrawBtn"
+                            class="btn btn-active bg-red-400 text-stone-100 hover:bg-red-500">Withdraw</button>
+
+                    </div>
+                    <!-- Deposit and Withdraw section end -->
+
+                    <!-- add money form start -->
+                    <div id="add-money-form" class="card bg-base-50 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Amount</span>
+                                </label>
+                                <input id="inputAmount" type="number" placeholder="Enter Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="inputPin" type="password" placeholder="Enter PIN"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="addMoneySubmit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- add money form end -->
+
+                    <!--Withdraw money form start -->
+                    <div id="depo-form" class="hidden  card bg-base-50 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Withdraw Amount</span>
+                                </label>
+                                <input id="depoinputAmount" type="number" placeholder="Enter Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="depoinputPin" type="password" placeholder="Enter PIN"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="withdMoneySubmit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Withdraw money form end -->
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <!-- script js link -->
+    <script src="/js/add-money.js"></script>
+    <script src="/js/withdraw.js"></script>
+    <script src="/js/toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUi and tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hide the up and down arrows for number input */
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type='number'] {
+            -moz-appearance: textfield;
+            /* For Firefox */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex justify-center items-center h-[100vh]">
+
+        <div class="mockup-phone border-primary">
+            <div class="camera"></div>
+            <div class="display">
+
+                <div class="artboard artboard-demo phone-1 px-2">
+                    <div class="flex gap-5">
+                        <h2 class="text-3xl pb-5 font-semibold text-white">Login First</h2>
+
+                        <button class="btn" onclick="my_modal_3.showModal()">LogIn Info</button>
+                    </div>
+
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Mobile Number</span>
+                                </label>
+                                <input id="inputNumber" type="number" placeholder="Enter Number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="inputPin" type="password" placeholder="Enter PIN"
+                                    class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot PIN?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="logIn-btn" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- You can open the modal using ID.showModal() method -->
+
+    <dialog id="my_modal_3"  class="modal w-[80%] md:w-[45%] lg:w-[25%] lg:pr-4 mx-auto">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-6 top-2">✕</button>
+            </form>
+            <h3 class="text-lg font-bold">Hello! dear,</h3>
+            <p class="py-4">This is testing purpose that's why you find login details here.</p>
+            <p>Demo Phone Number: 602748</p>
+            <p>Demo Pin: 1234</p>
+        </div>
+    </dialog>
+
+
+    <!-- logIn js file link -->
+    <script src="./js/logIn.js"></script>
+</body>
+
+</html>
